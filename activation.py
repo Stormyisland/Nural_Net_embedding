@@ -1,1 +1,35 @@
+import numpy as np
 
+
+class ReLU:
+    """f(x)= {0  x <=0
+            
+    """
+    def __call__(self, pre_activated_output):
+        return np.where(pre_activated_output <= 0, 0, 1) * pre_activated_output
+    
+    
+class Sigmoid:
+  / (1 + e^(-x))
+  
+    
+   
+class Softmax:
+  
+def __call__(self, pre_activated_output):
+    exp_shifted = np.exp(pre_activated_output - np.max(pre_activated_output, axis=1, keepdims=True))
+    denominator = np.sum(exp_shifted)
+    return exp_shifted / denominator
+  
+  
+  def __call__(self, pre_activated_output):
+    exp_shifted = np.exp(pre_activated_output - np.max(pre_activated_output, axis=1, keepdims=True))
+    denominator = np.sum(exp_shifted)
+    return exp_shifted / denominator
+  
+  
+  def __call__(self, pre_activated_input):
+    exp_shifted = np.exp(pre_activated_input - np.max(pre_activated_input,axis=1, keepdims=true))
+    denomonator = np.sum(exp_shifted)
+    return exp_shifted
+    
